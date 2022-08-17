@@ -17,13 +17,30 @@ module.exports = () => {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
     },
+    //TODO: Add plugins.
     plugins: [
-      
+      new HtmlWebpackPlugin({
+        template: "./index.html",
+        title: "JATE"
+      }),
+
+      new InjectManifest({
+        swSrc: "/src-sw.js",
+        swDest: "src-sw.js"
+      }),
+
+      new WebpackPwaManifest({
+        fingerprints: false,
+
+      })
     ],
 
     module: {
       rules: [
-        
+        {
+          test: /\.css$/i,
+          use: ["style-loader", "css-loader"]
+        }
       ],
     },
   };
