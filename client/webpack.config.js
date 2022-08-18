@@ -31,8 +31,15 @@ module.exports = () => {
 
       new WebpackPwaManifest({
         fingerprints: false,
-
-      })
+        inject: true,
+        name: "Just Another Text Editor",
+        short_name: "JATE",
+        description: "Easily edit your text documents and source code.",
+        background_color: '#225ca3',
+        theme_color: '#225ca3',
+        start_url: "./",
+        publicPath: "./",
+      }),
     ],
 
     module: {
@@ -40,7 +47,20 @@ module.exports = () => {
         {
           test: /\.css$/i,
           use: ["style-loader", "css-loader"]
-        }
+        },
+          //TODO: Add Babel module loader.
+        {
+          test: /\.m?js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: "babel-loader",
+            options: {
+              presets: ["@babel/preset-env"],
+              plugins: ["@babel/plugin-proposal-object-rest-spread", "@babel/transform-runtime"],
+            }
+          }
+
+        },
       ],
     },
   };
