@@ -55,7 +55,7 @@ module.exports = () => {
           test: /\.css$/i,
           use: ["style-loader", "css-loader"]
         },
-          //TODO: Add Babel module loader.
+         //This is the Babel transpiler loader module.
         {
           test: /\.m?js$/,
           exclude: /node_modules/,
