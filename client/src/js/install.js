@@ -34,7 +34,10 @@ butInstall.addEventListener('click', async () => {
 
 //If app is installed then set deferred prompt null.
 window.addEventListener('appinstalled', (event) => {
+
     window.deferredPrompt = null;
+
     //Set install button hidden when app is installed.
     butInstall.classList.toggle("hidden", true);
+    
 });
