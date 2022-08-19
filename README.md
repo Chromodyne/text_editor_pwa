@@ -8,5 +8,12 @@ With the previous decade's boom of people accessing the internet through their p
 
 The concept of this application is simple, it is a web based text-editor that, through the use of webpack and babel, can easily be installed by users on their desktop or portable device through the web-browser. Simply click "Install!" at the top left hand side of the website and a prompt will appear. Now you can enjoy this text editor anywhere you are even if offline! It makes use of caching and IndexedDB storage to speed up loading and save your progress.
 
+Give it a test run today!
 
 ## Live Website ##
+
+https://text-editor-pwa-devin.herokuapp.com/
+
+## Screenshot ##
+
+![Website Screenshot](./img/screenshot.png "Website Screenshot")
