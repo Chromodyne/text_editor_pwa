@@ -43,7 +43,7 @@ export const getDb = async () => {
 
   const res = await req;
 
-  //Debug only.
+  //Debugging only.
   console.log("Loaded from IndexedDB", res);
 
 };
